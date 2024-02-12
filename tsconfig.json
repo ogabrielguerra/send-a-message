@@ -1,0 +1,11 @@
+{
+    "compilerOptions": {
+        "outDir": "./js/dist",
+        "removeComments": true,
+        "target": "es2015"
+    },
+    "include": ["./**/*.ts"],
+    "exclude": [
+        "node_modules/**/*"
+    ]
+}

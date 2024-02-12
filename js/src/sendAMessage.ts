@@ -4,7 +4,6 @@ interface ArrayConstructor {
 }
 
 class UserFeedback{
-
     private sendButton :HTMLElement|null = document.getElementById("sendButton");
     private sendMessage :HTMLElement|null = document.getElementById("sendingMessage");
     private feedbackMessage :HTMLElement|null = document.getElementById("feedbackMessage");
@@ -26,7 +25,6 @@ class UserFeedback{
 }
 
 class SendAMessage{
-
     private proceed :boolean = true;
     private inputs :NodeList|null = null;
     private inputsList :any;
@@ -35,15 +33,17 @@ class SendAMessage{
     private idiom :string;
 
     constructor(url: string, idiom: string='PT'){
+        console.log('Initialized...');
         let element = document.getElementById('formContainer');
         this.idiom = idiom;
-
+        
         if (typeof(element) != 'undefined' && element != null){
             this.inputs = element.querySelectorAll('input, textarea');
             this.inputsList = Array.from(this.inputs);
             this.numInputs = this.inputs.length;
         }else{
             console.log('ERROR: No fields available.');
+            console.log("test")
         }
 
         this.sendEmailMessage(url, '');
@@ -96,7 +96,6 @@ class SendAMessage{
         this.inputsList.forEach((item :any)=>{
             fd.append(item.name, item.value);
         });
-
         return fd;
     }
 
@@ -113,6 +112,8 @@ class SendAMessage{
     }
 
     sendEmailMessage(url :string, token :string) {
+        //@TODO: Implement use of token
+        
         if(!this.proceed || !this.exists(url)){
             return false;
         }
@@ -136,7 +137,6 @@ class SendAMessage{
             messageError = 'An error occurred while trying to send your message. Please use one of our phones.';
         }
 
-        // @ts-ignore
         new Promise<XMLHttpRequest>((resolve) => {
             xhr.onreadystatechange = ()=> resolve(xhr);
         })
