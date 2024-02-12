@@ -1,0 +1,31 @@
+{
+  "name": "send-a-message",
+  "version": "1.0.0",
+  "description": "This is a TypeScript project to streamline the process of sending messages via forms.",
+  "main": "index.html",
+  "scripts": {
+    "start": "http-server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ogabrielguerra/sendamessage.git"
+  },
+  "keywords": [
+    "typescript",
+    "forms",
+    "javascript",
+    "html",
+    "frontend",
+    "ux-tools"
+  ],
+  "author": "Gabriel Guerra | @ogabrielguerra",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ogabrielguerra/sendamessage/issues"
+  },
+  "homepage": "https://github.com/ogabrielguerra/sendamessage#readme",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}
