@@ -33,7 +33,6 @@ class SendAMessage{
     private idiom :string;
 
     constructor(url: string, idiom: string='PT'){
-        console.log('Initialized...');
         let element = document.getElementById('formContainer');
         this.idiom = idiom;
         
@@ -43,7 +42,6 @@ class SendAMessage{
             this.numInputs = this.inputs.length;
         }else{
             console.log('ERROR: No fields available.');
-            console.log("test")
         }
 
         this.sendEmailMessage(url, '');

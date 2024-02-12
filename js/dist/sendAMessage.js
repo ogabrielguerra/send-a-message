@@ -24,7 +24,6 @@ class SendAMessage {
         this.inputs = null;
         this.numInputs = 0;
         this.userFeedback = new UserFeedback();
-        console.log('Initialized...');
         let element = document.getElementById('formContainer');
         this.idiom = idiom;
         if (typeof (element) != 'undefined' && element != null) {
@@ -34,7 +33,6 @@ class SendAMessage {
         }
         else {
             console.log('ERROR: No fields available.');
-            console.log("test");
         }
         this.sendEmailMessage(url, '');
         this.proceed = true;
